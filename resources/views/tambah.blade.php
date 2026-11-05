@@ -31,12 +31,12 @@
 
              <div class="mb-3">
                 <label>Deskripsi :</label>
-                <input type="text" name="Deskripsi" class="form-control">
+                <input type="text" name="deskripsi" class="form-control">
             </div>
 
              <div class="mb-3">
                 <label>Foto :</label>
-                <input type="file" name="foto" accept="asset/" class="form-control">
+                <input type="file" name="foto" accept="image/*" class="form-control">
             </div>
 
             <div class="mb-3">

@@ -37,3 +37,5 @@ Route::get('/menu', [AuthController::class, 'menu'])->name('menu');
 Route::get('/tambah', [AuthController::class, 'tambah'])->name('tambah');
 Route::post('/posttambah', [AuthController::class, 'posttambah'])->name('posttambah');
 
+//Hapus
+Route::get('/hapus/{produk}', [AuthController::class, 'hapus'])->name('hapus');

@@ -28,14 +28,14 @@
                 @foreach ($produk as $p)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td><img src="{{ asset($p->foto) }}" style="height: 100px;"></td>
+                    <td><img src="{{ asset('storage/' .$p->foto) }}" style="height: 100px;"></td>
                     <td>{{ $p->name }}</td>
                     <td>{{ $p->harga }}</td>
                     <td>{{ $p->deskripsi }}</td>
                     <td>{{ $p->qty }}</td>
                     <td>
                         <a href="" class="btn btn-warning">Edit</a>
-                        <a href="" class="btn btn-danger">Hapus</a></td>
+                        <a href="{{ route('hapus', $p->id) }}" class="btn btn-danger">Hapus</a></td>
                     </td>
                 </tr>
                 @endforeach

@@ -109,4 +109,10 @@ class AuthController extends Controller
 
         return redirect()->route('admin');
     }
+
+    public function hapus(produk $produk)
+    {
+        $produk->delete();
+        return redirect()->route('admin');
+    }
 }
