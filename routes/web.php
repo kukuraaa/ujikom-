@@ -41,5 +41,5 @@ Route::post('/posttambah', [AuthController::class, 'posttambah'])->name('posttam
 Route::get('/hapus/{produk}', [AuthController::class, 'hapus'])->name('hapus');
 
 //edit 
-Route::get('/edit{produk}', [AuthController::class, 'edit'])->name('edit');
-Route::post('/postedit', [AuthController::class, 'postedit'])->name('postedit');
+Route::get('/edit/{produk}', [AuthController::class, 'edit'])->name('edit');
+Route::post('/postedit/{produk}', [AuthController::class, 'postedit'])->name('postedit');

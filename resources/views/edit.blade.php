@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <title>Tambah</title>
+    <title>Edit</title>
 </head>
 <body>
     <div class="container d-flex mt-5 justify-content-center align-items-center">
-        <form action="{{ route('postedit') }}" method="POST" class="form-group" enctype="multipart/form-data">
+        <form action="{{ route('postedit', $produk->id) }}" method="POST" class="form-group" enctype="multipart/form-data">
             @csrf
 
             <label for="">Kategori :</label>
@@ -44,7 +44,7 @@
                 <input type="number" name="qty" class="form-control" value="{{ $produk->qty }}">
             </div>
 
-            <button class="btn btn-success">Tambah</button>
+            <button class="btn btn-warning">Edit</button>
             <a href="{{ route('admin') }}" class="btn btn-danger">Batalkan</a>
         </form>
     </div>

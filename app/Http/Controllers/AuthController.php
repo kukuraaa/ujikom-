@@ -129,7 +129,7 @@ class AuthController extends Controller
             'name'=> 'required',
             'harga'=> 'required|integer',
             'deskripsi'=> 'required',
-            'foto'=> 'required|file|image',
+            'foto'=> 'nullable|file|image',
             'qty'=> 'required|integer'
         ]);
 

@@ -10,11 +10,11 @@
 <body>
     @include('template.navbar')
     <h1></h1>
-    <div class="row">
+    <div class="row ">
             @foreach ($produk as $p)
                 <div class="col-3 mt-20">
                     <div class="card justify-content-center m-5">
-                        <img src="{{ asset('storage/' .$p->foto) }}" alt="" class="card-img-top" style="height: 200px">
+                        <img src="{{ asset('storage/' .$p->foto) }}" alt="" class="card-img-top" style="height: 150px">
                         <div class="card-body">
                             <h5 class="card-title">{{ $p->name }}</h5>
                             <p class="card-text">Rp. {{ number_format($p->harga, 0, ',', '.') }}</p>
