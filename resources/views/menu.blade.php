@@ -9,21 +9,23 @@
 </head>
 <body>
     @include('template.navbar')
-    <h1></h1>
-    <div class="row ">
-            @foreach ($produk as $p)
-                <div class="col-3 mt-20">
-                    <div class="card justify-content-center m-5">
-                        <img src="{{ asset('storage/' .$p->foto) }}" alt="" class="card-img-top" style="height: 150px">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $p->name }}</h5>
-                            <p class="card-text">Rp. {{ number_format($p->harga, 0, ',', '.') }}</p>
-                            <a href="" class="btn btn-secondary">Detail</a>
+    <div class="container mt-5 justify-content-center d-flex align-items-center">
+        <div class="row">
+                @foreach ($produk as $p)
+                    <div class="col-3 mt-5">
+                        <div class="card">
+                            <img src="{{ asset('storage/' .$p->foto) }}" alt="" class="card-img-top">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ $p->name }}</h4>
+                                <p class="card-text">Rp. {{ number_format($p->harga, 0, ',', '.') }}</p>
+                                <a href="{{ route('detail', $p->id) }}" class="btn btn-secondary">Detail</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
-    </div>
+                @endforeach
+        </div>
+    </div> 
+     @include('template.footer') 
 </body>
 <script src="{{ asset('bootstrap/js/bootstrap.bundle.js') }}"></script>
 </html>

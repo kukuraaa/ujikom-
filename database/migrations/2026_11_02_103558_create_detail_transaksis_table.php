@@ -15,6 +15,7 @@ class CreateDetailTransaksisTable extends Migration
     {
         Schema::create('detail_transaksis', function (Blueprint $table) {
             $table->id();
+            
             $table->timestamps();
         });
     }

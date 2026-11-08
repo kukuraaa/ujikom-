@@ -43,3 +43,10 @@ Route::get('/hapus/{produk}', [AuthController::class, 'hapus'])->name('hapus');
 //edit 
 Route::get('/edit/{produk}', [AuthController::class, 'edit'])->name('edit');
 Route::post('/postedit/{produk}', [AuthController::class, 'postedit'])->name('postedit');
+
+//keranjang
+Route::get('/keranjang', [AuthController::class, 'keranjang'])->name('keranjang');
+Route::post('/postkeranjang/{produk}', [AuthController::class, 'postkeranjang'])->name('postkeranjang');
+
+//detail
+Route::get('/detail/{produk}', [AuthController::class, 'detail'])->name('detail');

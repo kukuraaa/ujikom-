@@ -144,4 +144,14 @@ class AuthController extends Controller
 
             return redirect()->route('admin');
     }
+
+    public function keranjang()
+    {
+        return view('keranjang');
+    }
+
+    public function detail()
+    {
+        return view('detail');
+    }
 }
