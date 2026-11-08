@@ -147,7 +147,8 @@ class AuthController extends Controller
 
     public function keranjang()
     {
-        return view('keranjang');
+        $produk = Produk::all();
+        return view('keranjang', compact('produk'));
     }
 
     public function detail()
