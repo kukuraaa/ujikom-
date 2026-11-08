@@ -17,6 +17,10 @@
             <label>Password :</label>
             <input type="password" name="password" class="form-control">
 
+           @if(Session::has('status'))
+                <div class="alert alert-danger">{{ Session::get('status') }}</div>
+           @endif
+
             <button class="btn btn-primary">Login</button>
             <a href="{{ route('register') }}" class="btn btn-success">Register</a>
         </form>

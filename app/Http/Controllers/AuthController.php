@@ -34,7 +34,7 @@ class AuthController extends Controller
                         return redirect()->route('menu');
                     }
             }
-            return back()->with('email atau pw salah coba lagu');
+            return back()->with('status', 'Email atau password salah, coba lagi!');
     }
 
     public function register()
