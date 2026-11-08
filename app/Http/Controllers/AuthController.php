@@ -115,4 +115,33 @@ class AuthController extends Controller
         $produk->delete();
         return redirect()->route('admin');
     }
+
+    public function edit(produk $produk)
+    {
+        $kategori = kategori::all();
+        return view('edit', compact('produk', 'kategori')); 
+    }
+
+    public function postedit(Request $request, produk $produk)
+    {
+        $data = $request->validate([
+            'kategori_id'=> 'required',
+            'name'=> 'required',
+            'harga'=> 'required|integer',
+            'deskripsi'=> 'required',
+            'foto'=> 'required|file|image',
+            'qty'=> 'required|integer'
+        ]);
+
+        if($request->hasFile('foto'))
+            {
+                $data['foto'] = $request->foto->store('img', 'public');
+            }else
+            {
+                unset($data['foto']);
+            }
+            $produk->update($data);
+
+            return redirect()->route('admin');
+    }
 }

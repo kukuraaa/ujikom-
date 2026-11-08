@@ -31,19 +31,23 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Kategori::create([
-            'name'=>'makanan'
+            'name'=>'Flower Bouquet'
         ]);
 
         Kategori::create([
-            'name'=>'minuman'
+            'name'=>'Doll Bouquet'
+        ]);
+
+        Kategori::create([
+            'name'=>'Chocolate Bouquet'
         ]);
 
         Produk::create([
             'kategori_id'=>1,
-            'name'=> 'orang utan',
+            'name'=> 'Tulif',
             'harga'=> 1000000,
-            'deskripsi'=> 'enak',
-            'foto'=> 'asset/onyet.jpg',
+            'deskripsi'=> 'kirei',
+            'foto'=> 'asset/tulif.jpg',
             'qty'=> 10
         ]);
 
